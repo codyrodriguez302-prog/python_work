@@ -1,7 +1,8 @@
 from pathlib import Path
 folder = Path.home() / "Downloads"
 print(folder)
-image_format=[".png", ".jpg", ".jpeg", ".webp"]
+image_format={".jpg",".jpeg",".png",".gif",".webp",".bmp",
+".tif",".tiff",".svg",".heic",".heif",".avif",".ico",".raw",".dng",".jfif",}
 for item in folder.iterdir():
     if not item.is_file():
         continue
@@ -40,4 +41,5 @@ for item in folder.iterdir():
             print("file already exist")
     else:
         print("unknown type of file")
+
     
