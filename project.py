@@ -17,29 +17,5 @@ for item in folder.iterdir():
             print("safe to move")
             item.rename(destination)
         else:
-            print("file already exist")
-        print(destination)
-    elif extension==".pdf":
-        print("document")
-        document_folder= folder / "Document"
-        document_folder.mkdir(exist_ok=True)
-        destination= document_folder / item.name
-        if not destination.exists():
-            print("safe to move")
-            item.rename(destination)
-        else:
-            print("file already exist")
-    elif extension==".mp3":
-        print("audio")
-        audio_folder= folder / "Audio"
-        audio_folder.mkdir(exist_ok=True)
-        destination = audio_folder / item.name
-        if not destination.exists():
-            print("safe to move")
-            item.rename(destination)
-        else:
-            print("file already exist")
-    else:
-        print("unknown type of file")
-
+           
     

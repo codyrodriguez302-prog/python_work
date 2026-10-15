@@ -16,6 +16,33 @@ HOW THIS FILE WORKS
 
 def say_hello(name):                      # define
     print("Hello, " + name + "!")
+
+# say_hello("Sam")                        # invoke  ->  Hello, Sam!
+
+# TRAPS:
+#   - Defining a function does NOT run it. You must call it: say_hello("Sam")
+#   - Forgetting the ( ) -> say_hello  is the function itself, not a call.
+
+# =============================================================================
+
+def print_only(x):
+    print(x)                              # no return statement
+
+# result = print_only(7)                  # prints 7, but result is None
+
+# TRAPS:
+#   - A function with no return (or a bare `return`) gives back None.
+#   - None is not 0, not False, and not "" — it is its own type (NoneType).
+#   - Check for it with `is None`, not `== None`.
+# LEARN MORE: https://www.w3schools.com/python/python_none.asp
+
+def diy_first_letter(word):
+    """
+    Return the first letter of word. If word is empty (""), return None.
+    >>> diy_first_letter("cat")
+    'c'
+    >>> diy_first_letter("") is None
+    True
     """
     if word == "":
         return None
