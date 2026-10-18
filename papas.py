@@ -48,3 +48,4 @@ if __name__ == "__main__":
 
     # Save output
     tracker.save_to_csv()
+    
