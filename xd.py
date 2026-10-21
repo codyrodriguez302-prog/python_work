@@ -34,7 +34,7 @@ for item in folder.iterdir():
         if not move.exists():
             item.rename(move)
         else:
-            couter=1
+            counter=1
             move=new/f"{item.stem}_{counter}{item.suffix}"
             while move.exists():
                 counter+=1

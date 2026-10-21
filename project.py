@@ -37,5 +37,9 @@ for item in folder.iterdir():
         print("audio")
         audio_folder= folder / "Audio"
         move_file(item, audio_folder)
+    elif extension==".py":
+        print("python")
+        folder=Path.home()/"Documents"/"python_work"
+        move_file(item, folder)
     else:
         print("unknown type of file")
