@@ -113,4 +113,11 @@ print(sorted(games))
 print(f"heres the og list {games} \n and here is the sorted list {sorted(games)}")
 games.reverse()
 print(f"we can also do this in reverse {games}")
+
 """
+a={'speed':4, 'hp':3, 'color':"green"}
+if a['speed']<5:
+    increment=2
+    print("fast one")
+a['speed']=a['speed']+ increment
+print (a['speed'])
