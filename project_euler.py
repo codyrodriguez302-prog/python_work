@@ -40,3 +40,34 @@ for n in finos:
         k.append(n)
 print(sum(k))
 """
+"""
+q=[]
+for i in range(1,999):
+    for o in range(1,999):
+        l=i*o
+        if str(l)==str(l)[::-1]:
+            q.append(l)
+print(max(q))
+"""
+"""
+l=[]
+for i in range(1, 101):
+    i=i**2
+    l.append(i)
+print(l)
+k=0
+g=[]
+for s in range(1, 101):
+    g.append(s)
+print(g)
+g=sum(g)
+print(g)
+g=g**2
+l=sum(l)
+print(g - l)
+"""
+s=[]
+for i in range(1,10002):
+    if i %1==0 and i%i==0:
+        s.append(i)
+print(s)
