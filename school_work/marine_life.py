@@ -24,23 +24,22 @@ class MarineAnimal:
     """
     
     def __init__(self, species_name, habitat_depth, body_length, ocean_zone):
-        # TODO: Initialize the four instance variables
-        pass
+        self.species_name=species_name
+        self.habitat_depth=habitat_depth
+        self.body_length=body_length
+        self.ocean_zone=ocean_zone
     
     def get_description(self):
         """Returns basic marine animal information"""
-        # TODO: Return a formatted string with species info
-        pass
+        return f"The species name is {self.species_name}, their habitats depth is {self.habitat_depth}, their body lenght is {self.body_length} and they usually are around {self.ocean_zone} "
     
     def calculate_food_needs(self):
         """Base food calculation - 3% of body length in kg per day"""
-        # TODO: Calculate base food needs
-        pass
+        return self.body_length*0.03
     
     def swim(self):
         """Describes how the animal swims - THIS WILL BE OVERRIDDEN (POLYMORPHISM!)"""
-        # TODO: Return swimming description for generic marine animal
-        pass
+        return (f"this animal is really fast")
 
 
 class Predator(MarineAnimal):
@@ -51,18 +50,16 @@ class Predator(MarineAnimal):
     """
     
     def __init__(self, species_name, habitat_depth, body_length, ocean_zone, hunting_range):
-        # TODO: Call parent constructor and initialize hunting_range
-        pass
-    
+        super().__init__(species_name, habitat_depth, body_length, ocean_zone)
+        self.hunting_range=hunting_range
+
     def calculate_food_needs(self):
         """Predators need 8% of body length + 0.5kg per km of hunting range"""
-        # TODO: Calculate food needs for predators
-        pass
+        return self.body_length*0.08 + self.hunting_range/2
     
     def swim(self):
         """Override parent's swim method - POLYMORPHISM!"""
-        # TODO: Return predator-specific swimming description
-        pass
+        return f"even faster"
 
 
 class Shark(Predator):
@@ -73,13 +70,12 @@ class Shark(Predator):
     """
     
     def __init__(self, species_name, habitat_depth, body_length, ocean_zone, hunting_range, bite_force):
-        # TODO: Call parent constructor and initialize bite_force
-        pass
-    
+        super().__init__(species_name, habitat_depth, body_length, ocean_zone, hunting_range)
+        self.bite_force=bite_force
+
     def swim(self):
         """Sharks have specific swimming description"""
-        # TODO: Return shark-specific swimming behavior including bite_force
-        pass
+        return f"sharks are really fast and their bite force is {self.bite_force}"
 
 
 class Octopus(Predator):
@@ -90,13 +86,13 @@ class Octopus(Predator):
     """
     
     def __init__(self, species_name, habitat_depth, body_length, ocean_zone, hunting_range, tentacle_count):
-        # TODO: Call parent constructor and initialize tentacle_count
-        pass
-    
+        super().__init__(species_name, habitat_depth, body_length, ocean_zone, hunting_range)
+        self.tentacle_count=tentacle_count
+
+
     def swim(self):
         """Octopus have specific swimming description"""
-        # TODO: Return octopus-specific swimming behavior including tentacle_count
-        pass
+        return f"octopus are usually slow and they have {self.tentacle_count} tentacles"
 
 
 class FilterFeeder(MarineAnimal):
@@ -107,18 +103,16 @@ class FilterFeeder(MarineAnimal):
     """
     
     def __init__(self, species_name, habitat_depth, body_length, ocean_zone, filter_capacity):
-        # TODO: Call parent constructor and initialize filter_capacity
-        pass
+        super().__init__(species_name, habitat_depth, body_length, ocean_zone)
+        self.filter_capacity=filter_capacity
     
     def calculate_food_needs(self):
         """Filter feeders need 1% of body length plus filter efficiency bonus"""
-        # TODO: Calculate filter feeder food needs
-        pass
+        return self.body_length*0.01 + self.filter_capacity
     
     def swim(self):
         """Override parent's swim method - POLYMORPHISM!"""
-        # TODO: Return filter feeder-specific swimming description
-        pass
+        return f"feders are slow as FUCK"
 
 
 # =============================================================================
