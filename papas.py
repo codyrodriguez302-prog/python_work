@@ -3,7 +3,6 @@ from datetime import datetime
 
 class ExpenseTracker:
     def __init__(self):
-        # Initialize an empty DataFrame to store expenses
         self.expenses = pd.DataFrame(columns=["Date", "Category", "Amount", "Description"])
 
     def add_expense(self, category: str, amount: float, description: str = ""):
